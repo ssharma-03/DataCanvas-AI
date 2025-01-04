@@ -1,33 +1,3 @@
-import os
+setup acc to this dir 
 
-# Define the directory structure and files
-directories = {
-    "DC_Complete/app": ["main.py", "app.py", "config.py"],
-    "DC_Complete/app/templates": ["index.html", "base.html"],
-    "DC_Complete/analysis": ["text_analysis.py", "data_extraction.py"],
-    "DC_Complete/visualizations": ["visualization.py", "chart_generator.py"],
-    "DC_Complete/visualizations/templates": ["charts.html"],
-    "DC_Complete/dashboard": ["dashboard.py", "ui_components.py"],
-    "DC_Complete/dashboard/templates": ["dashboard.html"],
-    "DC_Complete/static/css": ["styles.css"],
-    "DC_Complete/static/js": ["scripts.js"],
-    "DC_Complete/static/images": [],
-    "DC_Complete/deployment": ["Dockerfile", "requirements.txt", "deploy.sh"],
-    "DC_Complete/tests": ["test_analysis.py", "test_visualizations.py", "test_dashboard.py"],
-    "DC_Complete/docs": ["README.md", "docs.md"],
-    "DC_Complete/logs": []
-}
-
-# Create directories and files
-for dir_path, files in directories.items():
-    # Create the directory if it doesn't exist
-    os.makedirs(dir_path, exist_ok=True)
-    
-    # Create placeholder files
-    for file_name in files:
-        file_path = os.path.join(dir_path, file_name)
-        if not os.path.exists(file_path):
-            with open(file_path, 'w') as file:
-                file.write(f"# Placeholder for {file_name}\n")
-            
-print("Directories and files created successfully.")
+DataCanvas/ │ ├── app/ # Main application files │ ├── init.py │ ├── main.py # Entry point of the application │ ├── routes.py # API routes (for web services if any) │ ├── config.py # Configuration file (API keys, settings) │ └── templates/ # HTML templates for web interface (if needed) │ ├── analysis/ # Data analysis and text analysis code │ ├── init.py │ ├── text_analyzer.py # Text extraction and analysis │ ├── data_analysis.py # Data analysis, correlation, regression, etc. │ ├── preprocess.py # Data preprocessing (cleaning, normalization) │ ├── wrangling.py # Data wrangling (aggregation, filtering) │ └── utils.py # Helper functions (e.g., data transformations) │ ├── visualizations/ # Visualization-related code │ ├── init.py │ ├── visualizer.py # Code for creating charts, graphs, and dashboards │ ├── chart_types.py # Define chart types and related functions │ └── templates/ # Chart templates or reusable layout components │ ├── dashboard/ # Dashboard and presentation generation │ ├── init.py │ ├── dashboard.py # Creating interactive dashboards │ ├── storytelling.py # Auto-generating narratives from data │ ├── presentation.py # Creating and editing presentations │ └── infographics.py # For infographic generation │ ├── static/ # Static files like CSS, JS, images │ ├── css/ │ ├── js/ │ └── images/ │ ├── deployment/ # Deployment-related files │ ├── Dockerfile # Docker setup for containerization │ ├── requirements.txt # Python dependencies │ └── config.yaml # Configuration for deployment (e.g., server settings) │ ├── tests/ # Unit tests and test scripts │ ├── init.py │ ├── test_text_analyzer.py # Unit tests for text analysis │ ├── test_preprocess.py # Unit tests for preprocessing │ ├── test_visualizations.py# Unit tests for visualizations │ ├── test_dashboard.py # Unit tests for dashboard and presentation generation │ └── test_deployment.py # Unit tests for deployment configurations │ ├── docs/ # Documentation (for both users and developers) │ ├── index.md # Main documentation file │ └── usage.md # User guide for the platform │ ├── logs/ # Logs for debugging and application monitoring │ └── app.log # Log file for errors, warnings, etc. │ └── README.md # Project overview and instructions
