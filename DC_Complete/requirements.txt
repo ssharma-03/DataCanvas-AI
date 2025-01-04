@@ -1,0 +1,5 @@
+groq  # For Groq AI client (ensure to replace with the correct version)
+spacy  # For NLP tasks
+pandas  # For data manipulation
+plotly  # For creating visualizations
+requests  # For making HTTP requests, if needed for external APIs
